@@ -1,0 +1,22 @@
+﻿@model Asp.Net.Identity.Models.ViewModels.Account.RegisterViewModel
+
+@{
+    Layout = "~/Views/Shared/Header.cshtml";
+}
+<h1>Register</h1>
+<div>
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+    {
+        <label>Username</label>
+        <br />
+        @Html.TextBoxFor(model => model.Username) @Html.ValidationMessageFor(model => model.Username)
+        <br />
+        <label>Password</label>
+        <br />
+        @Html.TextBoxFor(model => model.Password) @Html.ValidationMessageFor(model => model.Password)
+        <br />
+        <button type="submit">Register</button>
+    }
+</div>
+
+

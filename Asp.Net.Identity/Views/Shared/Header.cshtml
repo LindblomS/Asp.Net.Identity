@@ -1,0 +1,9 @@
+﻿<ul>
+    <li><a @Html.ActionLink("Home", "Index", "Home")>Home</a></li>
+    <li><a @Html.ActionLink("Login", "Login", "Account")>Login</a></li>
+    <li><a @Html.ActionLink("Register", "Register", "Account")>Register</a></li>
+    @if (User.Identity.IsAuthenticated) {<li><a @Html.ActionLink("Secret", "Secret", "Home")>Register</a></li>}
+</ul>
+
+
+@RenderBody();
